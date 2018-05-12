@@ -13583,20 +13583,17 @@ TkSuQmCC
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## (Optional) TODO: Report the performance of another  </span>
-<span class="c1">## face detection algorithm on the LFW dataset</span>
-<span class="c1">### Feel free to use as many code cells as needed.</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p><strong>My Answer:</strong> <br>
+From my point of perspective i think it's not a good reason to pose on the user<br>
+because OpenCv trained the model with fully clear images for faces if we supplied more partial faces to openCv we can get very dood predictions</p>
+</blockquote>
 
 </div>
 </div>
-</div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -14542,6 +14539,22 @@ test:  (836, 1, 1, 2048)
 </code></pre>
 <p><strong>Question 5:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  Describe why you think the architecture is suitable for the current problem.</p>
 <p><strong>Answer:</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p><strong>My Answer:</strong><br>
+I have used transfer learning a pre-trained nets outputs to begain with to train my model.<br>
+First of all i loaded <strong><em>DogResnet50Data.npz</em></strong> and training, validation, and testing data sets.<br>
+After that i created a <strong>sequential keras model</strong> .
+Then Add the first layer whech is pooling layer feeded with training data set we loaded from <strong><em>DogResnet50Data.npz</em></strong> <br> i have chosen the <strong>GlobalAveragePooling</strong> technique<br>
+Then Dropout 20% of pooling nodes to overcome overfitting <br>
+Finally added a fully connected layer <em>clasification</em> layer with number of outputs equal to number of classes and added <strong>softmax</strong> activation function to return the probability of the class</p>
+</blockquote>
 
 </div>
 </div>
