@@ -14554,6 +14554,9 @@ After that i created a <strong>sequential keras model</strong> .
 Then Add the first layer whech is pooling layer feeded with training data set we loaded from <strong><em>DogResnet50Data.npz</em></strong> <br> i have chosen the <strong>GlobalAveragePooling</strong> technique<br>
 Then Dropout 20% of pooling nodes to overcome overfitting <br>
 Finally added a fully connected layer <em>clasification</em> layer with number of outputs equal to number of classes and added <strong>softmax</strong> activation function to return the probability of the class</p>
+<hr>
+<p>The reason behind my choice of architecture with transfer learning is to make use of others pretrained model related to my problem for instance i use Resnet50 out data to make use of its weights that take may days to learn that weights<br>moreover, in my case i only change the weights in the last layer and freeze others from Resnet50<br>
+building my model from scratch can take weeks to be efficient but with transfer learning it can take couple of minutes for medium and small nets</p>
 </blockquote>
 
 </div>
